@@ -1,7 +1,7 @@
 Firefox CSS theme to maximize the vertical space of your monitor.
 
 ![alt text](https://github.com/hakan-demirli/Firefox_Custom_CSS/blob/main/pics/overall.png?raw=true)
-(Background: [Tempano Port by Duwon Lee](https://www.artstation.com/artwork/dB84A)
+(Background: [Tempano Port by Duwon Lee](https://www.artstation.com/artwork/dB84A))
 
 # Features
  * Horizontal tabs are removed. Use [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) or [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
