@@ -1,0 +1,53 @@
+/*************************************************** Home_screen_wallpaper ***************************************************/
+
+@-moz-document url("about:newtab"), url("about:home") {
+    body {
+        overflow: hidden !important;
+    }
+    #root {
+        background-image: url("my_wallpaper.jpg") !important;
+        background-size: cover !important;
+    }
+    /* Hide the ugly logo & wordmark sorry Mozilla */
+    .logo-and-wordmark {
+        visibility: hidden !important;
+    }
+    /* Make the search bar rounded */
+    #newtab-search-text,
+    #searchSubmit {
+		border-radius: 50px !important;
+	}
+	.search-wrapper .search-inner-wrapper {
+		margin: 10px !important; }
+	.search-wrapper{ padding-top: 9px !important}
+}
+/*********************************************************************************************************************/
+/*********************************************** TOP_sites_settings **************************************************/
+@-moz-document url-prefix(about:newtab){
+.top-site-outer .title {
+  /*color: black !important;*/ /*change color of the texts of the "top_sites"*/
+  }
+.top-site-outer .title {
+  font-size: 100px;
+  }
+.top-site-outer .title {
+  font-weight: bold;
+  }
+}
+/*********************************************************************************************************************/
+/*********************************************** Dark_mode_pdf **************************************************/
+@-moz-document regexp("^(?!.*\\.pdf\\?normal).*") {
+    #sidebarContainer > #sidebarContent > #thumbnailView {
+        --sidebaritem-bg-color: #38383D;
+    }
+    
+    #viewerContainer > #viewer > .page > .canvasWrapper > canvas {
+        filter: grayscale(100%) invert(90%);
+    }
+    
+    #sidebarContainer > #sidebarContent > #thumbnailView .thumbnailImage {
+        filter: grayscale(100%) invert(90%);
+        box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.5), 0 2px 8px hsla(0, 0%, 100%, 0.3) !important;
+    }
+}
+/*********************************************************************************************************************/
