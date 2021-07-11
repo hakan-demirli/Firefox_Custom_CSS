@@ -12,7 +12,7 @@ Firefox CSS theme to maximize the vertical space of your monitor.
  ![alt text](https://github.com/hakan-demirli/Firefox_Custom_CSS/blob/main/pics/dark_hover_menu.png)
 
 # Toggle PDF reader dark mode
-The PDF viewer dark mode is active by default. To deactivate it, just add ```?normal``` at the end of your pdf URL.
+The PDF viewer dark mode is active by default. To deactivate it, just add ```?normal``` to the end of your pdf URL.
 ![alt text](https://github.com/hakan-demirli/Firefox_Custom_CSS/blob/main/pics/pdf_dark_mode.png)
 
 # Credits
