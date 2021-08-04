@@ -10,6 +10,9 @@ Firefox CSS theme to maximize the vertical space of your monitor.
 
  * Dark mode for hover URL menu:  
  ![alt text](https://github.com/hakan-demirli/Firefox_Custom_CSS/blob/main/pics/dark_hover_menu.png)
+ 
+ * Search with Google text removed:  
+ ![alt text](https://github.com/hakan-demirli/Firefox_Custom_CSS/blob/main/pics/search_with_google.png)
 
 # Toggle PDF reader dark mode
 The PDF viewer dark mode is active by default. To deactivate it, just add ```?normal``` to the end of your pdf URL.

@@ -123,8 +123,12 @@ toolbar#nav-bar::after{ width: calc(var(--uc-window-control-width) + var(--uc-wi
 /************************************************ Hover_text_color ***************************************************/
 tooltip{-moz-appearance: none !important; background:#232323 !important; color: #ededed}
 /*********************************************************************************************************************/
-
-
+/******************************************* Remove_Search_with_Google ***********************************************/
+[data-l10n-id="urlbar-result-action-search-w-engine"]:not(.urlbarView-dynamic-onboardTabToSearch-titleStrong),
+.urlbarView-row[type="search"] .urlbarView-title-separator {
+  display: none;
+}
+/*********************************************************************************************************************/
 
 
 
