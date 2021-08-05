@@ -33,6 +33,14 @@
 .top-site-outer .title {
   font-weight: bold;
   }
+.top-site-outer .top-site-inner {
+  width: 50px !important;
+  height: 50px !important;
+  }
+.top-site-outer .tile {
+  width: 40px !important;
+  height: 40px !important;
+  }
 }
 /*********************************************************************************************************************/
 /*********************************************** Dark_mode_pdf **************************************************/
