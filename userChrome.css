@@ -129,6 +129,10 @@ tooltip{-moz-appearance: none !important; background:#232323 !important; color: 
   display: none;
 }
 /*********************************************************************************************************************/
+/******************************************* Remove_Padding_and_button_fix *************************************************/
+#urlbar-container{ padding-block: 0px !important }
+.titlebar-buttonbox-container{ -moz-box-align: start !important; }
+/*********************************************************************************************************************/
 
 
 
