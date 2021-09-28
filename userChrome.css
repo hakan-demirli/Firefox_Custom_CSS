@@ -133,6 +133,8 @@ tooltip{-moz-appearance: none !important; background:#232323 !important; color: 
 #urlbar-container{ padding-block: 0px !important }
 .titlebar-buttonbox-container{ -moz-box-align: start !important; }
 /*********************************************************************************************************************/
-
-
-
+/*************************************** Remove 1 pixel sized black line *********************************************/
+#navigator-toolbox {
+  border-bottom: none !important;
+}
+/*********************************************************************************************************************/
