@@ -42,6 +42,10 @@
   height: 40px !important;
   }
 }
+.top-site-outer:is(.active, :focus, :hover) { /*Remove dark-gray mouse hover box*/
+    box-shadow: none !important; 
+    background:transparent !important; 
+} 
 /*********************************************************************************************************************/
 /*********************************************** Dark_mode_pdf **************************************************/
 @-moz-document regexp("^(?!.*\\.pdf\\?normal).*") {

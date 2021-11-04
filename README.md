@@ -2,7 +2,14 @@ Firefox CSS theme to maximize the vertical space of your monitor.
 
 ![alt text](pics/overall.png?raw=true)
 (Background: [Tempano Port by Duwon Lee](https://www.artstation.com/artwork/dB84A))
+# Compatibilty
+Tested on:   
+* Ubuntu 20.04.3 LTS
+* Windows 10 20h1   
 
+Soon:
+*  macOS Catalina 10.15.5 and Big Sur 11.6   
+Problem: [No toolbar!](https://github.com/hakan-demirli/Firefox_Custom_CSS/issues/3)
 # Features
  * Horizontal tabs are removed. Use [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) or [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
  * Dark mode for the default PDF reader:  
