@@ -45,7 +45,11 @@
 .top-site-outer:is(.active, :focus, :hover) { /*Remove dark-gray mouse hover box*/
     box-shadow: none !important; 
     background:transparent !important; 
-} 
+}
+@-moz-document regexp(".+\.pdf$"){
+    .pdfViewer .page{ background: #38383D !important }
+    .loadingIcon+.canvasWrapper{ visibility: hidden }
+}
 /*********************************************************************************************************************/
 /*********************************************** Dark_mode_pdf **************************************************/
 @-moz-document regexp("^(?!.*\\.pdf\\?normal).*") {
