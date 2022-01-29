@@ -57,7 +57,7 @@
         --sidebaritem-bg-color: #38383D;
     }
     
-    #viewerContainer > #viewer > .page > .canvasWrapper > canvas {
+    #viewerContainer > #viewer .page > .canvasWrapper > canvas {
         filter: grayscale(100%) invert(90%);
     }
     
