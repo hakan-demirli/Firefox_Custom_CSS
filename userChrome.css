@@ -124,9 +124,10 @@
   tooltip{-moz-appearance: none !important; background:#232323 !important; color: #ededed}
   /*********************************************************************************************************************/
   /******************************************* Remove_Search_with_Google ***********************************************/
-  [data-l10n-id="urlbar-result-action-search-w-engine"]:not(.urlbarView-dynamic-onboardTabToSearch-titleStrong),
-  .urlbarView-row[type="search"] .urlbarView-title-separator {
-    display: none;
+  #urlbar[usertyping] .urlbarView-row:not([type]):first-child,
+  #urlbar[usertyping] .urlbarView-row[type="search"]:first-child,
+  .urlbarView-row[type="tabtosearch"] {
+    display: none !important;
   }
   /*********************************************************************************************************************/
   /******************************************* Remove_Padding_and_button_fix *************************************************/
