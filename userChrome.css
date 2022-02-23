@@ -113,4 +113,16 @@
   /*************************************** Remove Right Click Menu Top Settings ****************************************/
   #context-navigation,#context-sep-navigation{ display: none !important }
   /*********************************************************************************************************************/
-
+  /*************************************** Shrink toolbar by 1 pixel *********************************************/
+  #navigator-toolbox{
+    --toolbarbutton-inner-padding: 5px;
+  }
+  #urlbar-container{
+    --urlbar-container-height: 25px !important;
+    padding-block: 1px !important;
+  }
+  toolbarbutton.bookmark-item:not(.subviewbutton){
+    margin: 0px !important;
+    padding-block: 0 !important;
+  }
+  /*********************************************************************************************************************/
