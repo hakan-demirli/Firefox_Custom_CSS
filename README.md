@@ -43,6 +43,9 @@ _Customize mode > Density > Compact_
 **Startup Image**  
 _about:config > browser.startup.preXulSkeletonUI > False_    
 
+**Startup Tabs**    
+_Settings > General > Startup > Open previous windows and tabs > True_    
+(Otherwise size of the top sites will change everytime you open the browser.)
 
 ## Toggle PDF reader dark mode
 The PDF viewer dark mode is active by default. To deactivate it, just add ```?normal``` to the end of your pdf URL.
