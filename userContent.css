@@ -58,11 +58,11 @@
     }
     
     #viewerContainer > #viewer .page > .canvasWrapper > canvas {
-        filter: grayscale(100%) invert(90%);
+        filter: grayscale(10%) invert(90%);
     }
     
     #sidebarContainer > #sidebarContent > #thumbnailView .thumbnailImage {
-        filter: grayscale(100%) invert(90%);
+        filter: grayscale(10%) invert(90%);
         box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.5), 0 2px 8px hsla(0, 0%, 100%, 0.3) !important;
     }
 }
