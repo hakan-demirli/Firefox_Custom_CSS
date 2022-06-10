@@ -43,24 +43,31 @@
   }
 }
 .top-site-outer:is(.active, :focus, :hover) { /*Remove dark-gray mouse hover box*/
-    box-shadow: none !important; 
-    background:transparent !important; 
+    box-shadow: none !important;
+    background:transparent !important;
 }
+@-moz-document url("about:home"), url("about:newtab"){
+  .tile > .icon-wrapper{
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .icon-pin-small{ display: none !important; }
+}
+/*********************************************************************************************************************/
+/*********************************************** Dark_mode_pdf **************************************************/
 @-moz-document regexp(".+\.pdf$"){
     .pdfViewer .page{ background: #38383D !important }
     .loadingIcon+.canvasWrapper{ visibility: hidden }
 }
-/*********************************************************************************************************************/
-/*********************************************** Dark_mode_pdf **************************************************/
 @-moz-document regexp("^(?!.*\\.pdf\\?normal).*") {
     #sidebarContainer > #sidebarContent > #thumbnailView {
         --sidebaritem-bg-color: #38383D;
     }
-    
+
     #viewerContainer > #viewer .page > .canvasWrapper > canvas {
         filter: grayscale(10%) invert(90%);
     }
-    
+
     #sidebarContainer > #sidebarContent > #thumbnailView .thumbnailImage {
         filter: grayscale(10%) invert(90%);
         box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.5), 0 2px 8px hsla(0, 0%, 100%, 0.3) !important;
