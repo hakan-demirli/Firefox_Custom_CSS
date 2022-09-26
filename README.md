@@ -13,10 +13,12 @@ Firefox CSS theme to maximize the vertical space of your monitor.
 
 ## Compatibilty
 Tested on:
-* Ubuntu 20.04.3 LTS
-* Windows 10 20h1
+* Ubuntu 20+
+* Windows 10
 
-Soon:
+Not supported:
+* Windows 8.1
+Problem: [Missing Toolbar Icons](https://github.com/hakan-demirli/Firefox_Custom_CSS/issues/7)
 *  macOS Catalina 10.15.5 and Big Sur 11.6
 Problem: [No toolbar!](https://github.com/hakan-demirli/Firefox_Custom_CSS/issues/3)
 
