@@ -59,7 +59,7 @@
     .pdfViewer .page{ background: #38383D !important }
     .loadingIcon+.canvasWrapper{ visibility: hidden }
 }
-@-moz-document regexp("^(?!.*\\.pdf\\?normal).*") {
+@-moz-document regexp("^(?!.*\\.pdf\\?n).*") {
     #sidebarContainer > #sidebarContent > #thumbnailView {
         --sidebaritem-bg-color: #38383D;
     }

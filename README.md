@@ -4,6 +4,7 @@ Firefox CSS theme to maximize the vertical space of your monitor.
 (Background: [Tempano Port by Duwon Lee](https://www.artstation.com/artwork/dB84A))
 
 ## Contents
+- [Contents](#contents)
 - [Compatibilty](#compatibilty)
 - [Features](#features)
 - [Suggested Tweaks](#suggested-tweaks)
@@ -24,16 +25,13 @@ Problem: [No toolbar!](https://github.com/hakan-demirli/Firefox_Custom_CSS/issue
 
 ## Features
  * Horizontal tabs are removed. Use [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) or [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
- * Dark mode for the default PDF reader:
+ * Dark mode for the default PDF reader:<br>
    ![alt text](pics/dark_mode.png?raw=true)
 
- * Dark mode for hover URL menu:
+ * Dark mode for hover URL menu:<br>
  ![alt text](pics/dark_hover_menu.png)
 
- * Search with Google text removed:
- ![alt text](pics/search_with_google.png)
-
- * Thinner scroll bars:
+ * Thinner scroll bars:<br>
  ![alt text](pics/scroll_bar.png)
 
 ## Suggested Tweaks
@@ -54,7 +52,7 @@ _Settings > General > Startup > Open previous windows and tabs > True_
 _browser.sessionstore.restore_pinned_tabs_on_demand > True_
 
 ## Toggle PDF reader dark mode
-The PDF viewer dark mode is active by default. To deactivate it, just add ```?normal``` to the end of your pdf URL.
+The PDF viewer dark mode is active by default. To deactivate it, just add ```?n``` to the end of your pdf URL.<br>
 ![alt text](pics/pdf_dark_mode.png)
 
 ## Install
