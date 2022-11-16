@@ -6,47 +6,47 @@
     --uc-window-control-width: 898px; /* Space reserved for window controls */
     --uc-window-drag-space-width: 0px; /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
     --uc-toolbar-height: 32px;
-  
+
     --scrollbar-width: thin;
   }
   :root{
     --scrollbar-width: thin;
   }
-  
+
   /* Scrollbar colors and width - applied globally */
   :root{
     scrollbar-width: thin;
-  } 
-  
+  }
+
   /* Australian edition
   #main-window {
   transform:scaley(-1);
   }
   */
-  
+
   #viewerContainer > #viewer > .page > .canvasWrapper > canvas {
       filter: grayscale(100%);
       filter: invert(100%);
   }
-  
+
   #viewerContainer > #viewer > .page > .textLayer ::selection {
       /*background-color: #000000;*/  /* original */
       background-color: #FFFFFF;
   }
-  
+
   #sidebar-header {
     overflow: hidden !important;
   }
-  
+
   #tabbrowser-tabs {
     visibility: collapse !important;
   }
-  
+
   #sidebar-box #sidebar-header {
     display: none !important;
   }
-  
-  #sidebar,
+
+  #sidebar-box,
   #sidebar-header {
     position: relative !important;
     min-width: var(--sidebar-min-width) !important;
@@ -54,7 +54,7 @@
   transition: .1s ease .1s;
     z-index:1;
   }
-  
+
   #sidebar-box:hover :-moz-any(#sidebar,#sidebar-header) {
     min-width: var(--sidebar-visible-width) !important;
     max-width: var(--sidebar-visible-width) !important;
@@ -62,34 +62,34 @@
     z-index:1;
     position: relative !important;
   transition: .21s ease 3.20s;
-  
+
   }
-  
-  
+
+
   #nav-bar::before,
   #nav-bar::after{
     content: "";
     display: -moz-box;
     width: var(--uc-window-drag-space-width);
   }
-  
+
   toolbar#nav-bar::after{ width: calc(var(--uc-window-control-width) + var(--uc-window-drag-space-width,0px)) }
-  
+
   :root:not([uidensity="compact"]){--uc-toolbar-height: 38px}
-  
+
   #TabsToolbar{ visibility: collapse !important }
-  
+
   :root:not([inFullscreen]) #nav-bar{
     margin-top: calc(0px - var(--uc-toolbar-height));
   }
-  
+
   #toolbar-menubar{
     min-height:unset !important;
     height:var(--uc-toolbar-height) !important;
     position: relative;
   }
   /*********************************************************************************************************************/
-  
+
   /*********************************************************************************************************************/
   /************************************************ Hover_text_color ***************************************************/
   tooltip{-moz-appearance: none !important; background:#232323 !important; color: #ededed}
