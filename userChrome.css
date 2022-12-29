@@ -1,131 +1,181 @@
 
-/*************************************************** Disable_Horizontal_Tabs ***************************************************/
+/*************************************************** One_Liner ***************************************************/
+:root[tabsintitlebar][sizemode="normal"]{
+  --uc-window-drag-space-width: 0px;
+}
+:root[uidensity="compact"]{
+  --tab-block-margin: 2px !important;
+}
+
+/* Modify these to change relative widths or default height */
+#navigator-toolbox{
+  --uc-navigationbar-width: 60vw;
+  --uc-toolbar-height: 40px;
+  --uc-urlbar-min-width: 50vw; /* minimum width for opened urlbar */
+}
+
+#scrollbutton-up,
+#scrollbutton-down{ border-block-width: 2px !important; }
+
+/* Override for other densities */
+:root[uidensity="compact"] #navigator-toolbox{ --uc-toolbar-height: 34px; }
+:root[uidensity="touch"] #navigator-toolbox{ --uc-toolbar-height: 44px; }
+
+/* if the screen is smaller than 1300px right margin is 30% */
+@media screen and (max-width: 1300px){
+  #urlbar-container{ min-width:unset !important }
+  #navigator-toolbox > #nav-bar{ margin-right:30vw !important}
+}
+
+/* if the screen is smaller than 950px right margin is 20% */
+@media screen and (max-width: 950px){
+  #urlbar-container{ min-width:unset !important }
+  #navigator-toolbox > #nav-bar{ margin-right:20vw !important}
+}
+
+#TabsToolbar{
+  margin-left: var(--uc-navigationbar-width);
+  --tabs-navbar-shadow-size: 0px;
+}
+#tabbrowser-tabs{
+  --tab-min-height: calc(var(--uc-toolbar-height) - 2 * var(--tab-block-margin,0px)) !important;
+}
+
+/* This isn't useful when tabs start in the middle of the window */
+
+.titlebar-spacer[type="pre-tabs"]{ display: none }
+
+#navigator-toolbox > #nav-bar{
+  margin-right:calc(100vw - var(--uc-navigationbar-width));
+  margin-top: calc(0px - var(--uc-toolbar-height));
+}
+
+/* Window drag space  */
+:root[tabsintitlebar="true"] #nav-bar{ padding-left: var(--uc-window-drag-space-width) !important }
+
+/* Rules for window controls on left layout */
+
+@media (-moz-gtk-csd-reversed-placement),
+       (-moz-platform: macos){
+  .titlebar-buttonbox-container{
+    position: fixed;
+    display: flex;
+    left: 0px;
+    z-index: 3;
+    height: var(--uc-toolbar-height);
+    align-items: center
+  }
+  :root[tabsintitlebar="true"] #nav-bar{ padding-inline: calc(var(--uc-window-drag-space-width,0px) + 84px) 0px !important; }
+}
+@media (-moz-platform: macos){
+  :root[tabsintitlebar="true"] #nav-bar{ padding-inline: calc(var(--uc-window-drag-space-width,0px) + 72px) 0px !important; }
+}
+
+/* 1px margin on touch density causes tabs to be too high */
+.tab-close-button{ margin-top: 0 !important }
+
+/* Make opened urlbar overlay the toolbar */
+#urlbar[open]:focus-within{ min-width: var(--uc-urlbar-min-width,none) !important; }
+
+/* Hide dropdown placeholder */
+#urlbar-container:not(:hover) .urlbar-history-dropmarker{ margin-inline-start: -28px; }
+
+/* Fix customization view */
+#customization-panelWrapper > .panel-arrowbox > .panel-arrow{ margin-inline-end: initial !important; }
+
+
+/*************************************************** Remove_Horizontal_Tabs ***************************************************/
 :root {
-    --sidebar-min-width: 136px;
-    --sidebar-visible-width: 162px;
-    --uc-window-control-width: 898px; /* Space reserved for window controls */
-    --uc-window-drag-space-width: 0px; /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
-    --uc-toolbar-height: 32px;
+  --sidebar-min-width: 136px;
+  --sidebar-visible-width: 162px;
+  --uc-window-control-width: 20vw; /* Space reserved for window controls */
+  --uc-window-drag-space-width: 0px; /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
+  --uc-toolbar-height: 32px;
 
-    --scrollbar-width: thin;
-  }
-  :root{
-    --scrollbar-width: thin;
-  }
+  --scrollbar-width: thin;
+}
+:root{
+  --scrollbar-width: thin;
+}
 
-  /* Scrollbar colors and width - applied globally */
-  :root{
-    scrollbar-width: thin;
-  }
+#sidebar-header {
+  overflow: hidden !important;
+}
 
-  /* Australian edition
-  #main-window {
-  transform:scaley(-1);
-  }
-  */
+#tabbrowser-tabs {  visibility: collapse !important }
 
-  #viewerContainer > #viewer > .page > .canvasWrapper > canvas {
-      filter: grayscale(100%);
-      filter: invert(100%);
-  }
+#TabsToolbar{ visibility: collapse !important }
 
-  #viewerContainer > #viewer > .page > .textLayer ::selection {
-      /*background-color: #000000;*/  /* original */
-      background-color: #FFFFFF;
-  }
+#sidebar-box #sidebar-header {
+  display: none !important;
+}
 
-  #sidebar-header {
-    overflow: hidden !important;
-  }
-
-  #tabbrowser-tabs {
-    visibility: collapse !important;
-  }
-
-  #sidebar-box #sidebar-header {
-    display: none !important;
-  }
-
-  #sidebar-box,
-  #sidebar-header {
-    position: relative !important;
-    min-width: var(--sidebar-min-width) !important;
-    max-width: var(--sidebar-min-width) !important;
+#sidebar-box,
+#sidebar-header {
+  position: relative !important;
+  min-width: var(--sidebar-min-width) !important;
+  max-width: var(--sidebar-min-width) !important;
   transition: .1s ease .1s;
-    z-index:1;
-  }
+  z-index:1;
+}
 
-  #sidebar-box:hover :-moz-any(#sidebar,#sidebar-header) {
-    min-width: var(--sidebar-visible-width) !important;
-    max-width: var(--sidebar-visible-width) !important;
-    margin-right: calc((var(--sidebar-visible-width) - var(--sidebar-min-width)) * -1) !important;
-    z-index:1;
-    position: relative !important;
+#sidebar-box:hover :-moz-any(#sidebar,#sidebar-header) {
+  min-width: var(--sidebar-visible-width) !important;
+  max-width: var(--sidebar-visible-width) !important;
+  margin-right: calc((var(--sidebar-visible-width) - var(--sidebar-min-width)) * -1) !important;
+  z-index:1;
+  position: relative !important;
   transition: .21s ease 3.20s;
 
-  }
+}
 
+:root:not([uidensity="compact"]){--uc-toolbar-height: 38px}
 
-  #nav-bar::before,
-  #nav-bar::after{
-    content: "";
-    display: -moz-box;
-    width: var(--uc-window-drag-space-width);
-  }
+:root:not([inFullscreen]) #nav-bar{
+  margin-top: calc(0px - var(--uc-toolbar-height));
+}
 
-  toolbar#nav-bar::after{ width: calc(var(--uc-window-control-width) + var(--uc-window-drag-space-width,0px)) }
+#toolbar-menubar{
+  min-height:unset !important;
+  height:var(--uc-toolbar-height) !important;
+  position: relative;
+}
 
-  :root:not([uidensity="compact"]){--uc-toolbar-height: 38px}
+/************************************************ Hover_text_color ***************************************************/
+tooltip{-moz-appearance: none !important; background:#232323 !important; color: #ededed}
 
-  #TabsToolbar{ visibility: collapse !important }
+/******************************************* Remove_Search_with_Google ***********************************************/
+#urlbar[usertyping] .urlbarView-row:not([type]):first-child,
+#urlbar[usertyping] .urlbarView-row[type="search"]:first-child,
+.urlbarView-row[type="tabtosearch"] {
+  display: none !important;
+}
 
-  :root:not([inFullscreen]) #nav-bar{
-    margin-top: calc(0px - var(--uc-toolbar-height));
-  }
+/******************************************* Remove_Padding_and_button_fix *************************************************/
+#urlbar-container{ padding-block: 0px !important }
+.titlebar-buttonbox-container{ -moz-box-align: start !important; }
 
-  #toolbar-menubar{
-    min-height:unset !important;
-    height:var(--uc-toolbar-height) !important;
-    position: relative;
-  }
-  /*********************************************************************************************************************/
+/*************************************** Remove 1 pixel sized black line *********************************************/
+#navigator-toolbox {
+  border-bottom: none !important;
+}
 
-  /*********************************************************************************************************************/
-  /************************************************ Hover_text_color ***************************************************/
-  tooltip{-moz-appearance: none !important; background:#232323 !important; color: #ededed}
-  /*********************************************************************************************************************/
-  /******************************************* Remove_Search_with_Google ***********************************************/
-  #urlbar[usertyping] .urlbarView-row:not([type]):first-child,
-  #urlbar[usertyping] .urlbarView-row[type="search"]:first-child,
-  .urlbarView-row[type="tabtosearch"] {
-    display: none !important;
-  }
-  /*********************************************************************************************************************/
-  /******************************************* Remove_Padding_and_button_fix *************************************************/
-  #urlbar-container{ padding-block: 0px !important }
-  .titlebar-buttonbox-container{ -moz-box-align: start !important; }
-  /*********************************************************************************************************************/
-  /*************************************** Remove 1 pixel sized black line *********************************************/
-  #navigator-toolbox {
-    border-bottom: none !important;
-  }
-  /*********************************************************************************************************************/
-  /*************************************** Remove Right Click Menu Top Settings ****************************************/
-  #context-navigation,#context-sep-navigation{ display: none !important }
-  /*********************************************************************************************************************/
-  /*************************************** Shrink toolbar by 1 pixel *********************************************/
-  #navigator-toolbox{
-    --toolbarbutton-inner-padding: 5px;
-  }
-  #urlbar-container{
-    --urlbar-container-height: 25px !important;
-    padding-block: 1px !important;
-  }
-  toolbarbutton.bookmark-item:not(.subviewbutton){
-    margin: 0px !important;
-    padding-block: 0 !important;
-  }
-  /*********************************************************************************************************************/
-  /*************************************** Remove Bookmarks Star *******************************************************/
-  #star-button-box {display: none !important;}
-  /*********************************************************************************************************************/
+/*************************************** Remove Right Click Menu Top Settings ****************************************/
+#context-navigation,#context-sep-navigation{ display: none !important }
+
+/*************************************** Shrink toolbar by 1 pixel *********************************************/
+#navigator-toolbox{
+  --toolbarbutton-inner-padding: 5px;
+}
+#urlbar-container{
+  --urlbar-container-height: 25px !important;
+  padding-block: 1px !important;
+}
+toolbarbutton.bookmark-item:not(.subviewbutton){
+  margin: 0px !important;
+  padding-block: 0 !important;
+}
+
+/*************************************** Remove Bookmarks Star *******************************************************/
+#star-button-box {display: none !important;}
+
