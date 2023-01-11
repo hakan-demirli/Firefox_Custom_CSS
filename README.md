@@ -35,16 +35,19 @@ Problem: [No toolbar!](https://github.com/hakan-demirli/Firefox_Custom_CSS/issue
  ![alt text](pics/scroll_bar.png)
 
 ## Suggested Tweaks
-**Enable Compact Mode**
+**Enable Compact Mode**<br>
 _about:config > browser.compactmode.show > True_
 
-**Toolbar**
+**Remove Extensions Button**<br>
+_about:config > extensions.unifiedExtensions.enabled > False_
+
+**Compact Toolbar**<br>
 _Customize mode > Density > Compact_
 
-**Startup Image**
+**Startup Image**<br>
 _about:config > browser.startup.preXulSkeletonUI > False_
 
-**Startup Tabs**
+**Save Startup Tabs**<br>
 _Settings > General > Startup > Open previous windows and tabs > True_
 (Otherwise size of the top sites will change everytime you open the browser.)
 

@@ -179,5 +179,3 @@ toolbarbutton.bookmark-item:not(.subviewbutton){
 /*************************************** Remove Bookmarks Star *******************************************************/
 #star-button-box {display: none !important;}
 
-/*************************************** Remove Extensions From Toolbar *******************************************************/
-#unified-extensions-button {display: none !important;}
