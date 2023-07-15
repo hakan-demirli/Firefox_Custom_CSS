@@ -13,14 +13,14 @@ Firefox CSS theme to maximize the vertical space of your monitor.
 - [Credits](#credits)
 
 ## Compatibilty
-Tested on:
-* Ubuntu 20+
-* Windows 10
+Supported:
+* Gnome, KDE, Hyprland, i3wm
+* Windows 10, Windows 11
 
 Not supported:
 * Windows 8.1
 Problem: [Missing Toolbar Icons](https://github.com/hakan-demirli/Firefox_Custom_CSS/issues/7)
-*  macOS Catalina 10.15.5 and Big Sur 11.6
+*  MacOS Catalina 10.15.5 and Big Sur 11.6
 Problem: [No toolbar!](https://github.com/hakan-demirli/Firefox_Custom_CSS/issues/3)
 
 ## Features
@@ -59,7 +59,7 @@ The PDF viewer dark mode is active by default. To deactivate it, just add ```?n`
 * Follow the steps below to open the necessary directory:
   * Application Menu > Help > More troubleshooting information > Profile Folder > Open Folder
 * Create a new folder and name it `chrome`
-* Copy `userChrome.css` and `userContent.css` files to `chrome` folder
+* Copy all of the files into the `chrome` folder
 * Enable user scripts and compact mode:
   * Go to the `about:config` URL
   * Set `toolkit.legacyUserProfileCustomizations.stylesheets` to true
@@ -67,6 +67,6 @@ The PDF viewer dark mode is active by default. To deactivate it, just add ```?n`
   * Right click Toolbar > Customize Toolbar > Density (Bottom Left) > Compact
 * Install vertical tab extension: [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) or [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
 * Reopen Firefox
-
+* Customize the Sidebery/TreeStyleTabs and Toolbar to your hearts content.
 ## Credits
   * [r/FirefoxCSS](https://www.reddit.com/r/FirefoxCSS/)
