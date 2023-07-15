@@ -41,9 +41,6 @@ _about:config > browser.compactmode.show > True_
 **Remove Extensions Button**<br>
 _about:config > extensions.unifiedExtensions.enabled > False_
 
-**Compact Toolbar**<br>
-_Customize mode > Density > Compact_
-
 **Startup Image**<br>
 _about:config > browser.startup.preXulSkeletonUI > False_
 
@@ -63,9 +60,12 @@ The PDF viewer dark mode is active by default. To deactivate it, just add ```?n`
   * Application Menu > Help > More troubleshooting information > Profile Folder > Open Folder
 * Create a new folder and name it `chrome`
 * Copy `userChrome.css` and `userContent.css` files to `chrome` folder
-* Enable user scripts:
+* Enable user scripts and compact mode:
   * Go to the `about:config` URL
   * Set `toolkit.legacyUserProfileCustomizations.stylesheets` to true
+  * Set `browser.compactmode.show` to true
+  * Right click Toolbar > Customize Toolbar > Density (Bottom Left) > Compact
+* Install vertical tab extension: [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) or [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
 * Reopen Firefox
 
 ## Credits
