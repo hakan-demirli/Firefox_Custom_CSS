@@ -10,4 +10,6 @@ user_pref("browser.uidensity", 1);
 
 user_pref("browser.download.autohideButton", false);
 
+user_pref("ui.key.menuAccessKeyFocuses", false);
 
+user_pref("ui.key.menuAccessKey", 0);
