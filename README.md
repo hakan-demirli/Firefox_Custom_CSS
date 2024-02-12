@@ -38,9 +38,6 @@ Problem: [No toolbar!](https://github.com/hakan-demirli/Firefox_Custom_CSS/issue
 **Enable Compact Mode**<br>
 _about:config > browser.compactmode.show > True_
 
-**Remove Extensions Button**<br>
-_about:config > extensions.unifiedExtensions.enabled > False_
-
 **Startup Image**<br>
 _about:config > browser.startup.preXulSkeletonUI > False_
 
