@@ -41,6 +41,7 @@ tooltip{-moz-appearance: none !important; background:#232323 !important; color: 
 /*************************************** Remove 1 pixel sized black line *********************************************/
 #navigator-toolbox {
   border-bottom: none !important;
+  background-color: var(--toolbar-bgcolor) !important;
 }
 
 /*************************************** Remove Right Click Menu Top Settings ****************************************/
